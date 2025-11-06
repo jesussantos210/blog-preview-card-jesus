@@ -7,6 +7,7 @@
     --font-family-sans: 'figtree', sans-serif;
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --color: var(--color-link);
 }
 /* --- 2. Estilos del Body (Fondo y Centrado) --- */
 body {
@@ -25,18 +26,23 @@ body {
 .learning-card {
     background-color: var(--color-neutral-white);
     border: 1px solid var(--color-neutral-black);
-    border-radius: 20px;
-    box-shadow: 8px 8px 0 var(--color-neutral-black);
+    border-radius: 1.25rem;
+    box-shadow: 0/5rem 0.5rem var(--color-neutral-black);
     display: flex;
     flex-direction: column;
-    max-width: 384px;
+    max-width: 24rem;
     width: 100%;
     overflow: hidden;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .learning-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 }
 
 .learning-card:hover {
-    transform: translateY(-4px, -4px);
+    transform: translate(-4px, -4px);
     box-shadow: 12px 12px 0 var(--color-neutral-black);
 }
 /* --- 4. Cabecera (Imagen de Fondo) --- */
@@ -53,8 +59,8 @@ body {
 .card-content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Espacio entre elementos */
-    padding: 24px;
+    gap: 1.5rem; /* Espacio entre elementos */
+    padding: 0.75rem;
 }
 
 /* --- 6. Etiqueta "Aprendizaje" --- */
@@ -78,7 +84,7 @@ body {
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.3;
     transition: color 0.2s ease;
@@ -104,7 +110,7 @@ p {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 20px; /* Espacio extra arriba */
+   margin-block-start: 0.75rem; /* Espacio extra arriba */
 }   
 
 .author-avatar {
