@@ -41,7 +41,7 @@ body {
 }
 /* --- 4. Cabecera (Imagen de Fondo) --- */
 .card-header-image {
-    background-image: url('../assets/images/bg-pattern-card.svg');
+    background-image: url('assets/images/bg-pattern-card.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
